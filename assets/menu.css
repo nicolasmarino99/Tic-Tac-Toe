@@ -1,0 +1,19 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #483e6a;
+  background: linear-gradient(180deg, #483e6a 12%, #bd5773 88%); }
+  .menu #logo {
+    font-size: 100px;
+    font-weight: bolder;
+    line-height: 80px;
+    color: white; }
+    .menu #logo #pink-color {
+      color: #E85D77; }
+    .menu #logo #blue-color {
+      color: #4BB0E5; }
+
+/*# sourceMappingURL=menu.css.map */
