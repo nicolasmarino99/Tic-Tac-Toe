@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAEA,OAAQ;EACJ,OAAO,EAAE,IAAI;;AAGjB,iBAAkB;EACd,gBAAgB,EAAE,IAAI",
-"sources": ["game-multiplayer.scss"],
+"mappings": "AAaI,MAAY;EACV,OAAO,CAAC,QAAU;EAClB,OAAO,CAAC,QAA6B;;ACb3C,OAAQ;EACJ,OAAO,EAAE,IAAI;;AAGjB,iBAAkB;EACd,gBAAgB,EAAE,IAAI",
+"sources": ["variables.scss","game-multiplayer.scss"],
 "names": [],
 "file": "game-multiplayer.css"
 }
