@@ -6,50 +6,67 @@
     height: 100%;
     overflow: hidden;
     nav {
+        display: flex;
+        justify-content: space-between;
         z-index: 5;
         position: fixed;
         top: 0px;
         width: 100%;
-        background: #3F385A;
+        background: $navblue;
         height: 4em;
+        button {
+            background: none;
+            border: none;
+            padding: 0 30px;
+        }
+    }
+    .navbar-img {
+        width: 30px;
     }
     #orange-planet {
-        
         top: 12em;
-        right: 51em;
+        right: 54%;
         width: 803px;
         position: relative;
         filter: invert(100%) sepia(0%);
-        border-radius: 50%;
-        
+        border-radius: 50%; 
     }
     #purple-planet {
         top: -24em;
-        left: 73em;
+        left: 83%;
         width: 353px;
         position: relative;
-        filter: invert(100%) sepia(0%) saturate(0%)
-        ;
     }
     #aqua-planet {
         top: -14em;
-        left: 71em;
+        left: 60%;
         width: 653px;
-        position: relative;
-        
+        position: relative;   
     }
     .game-container {
         z-index: 5;
         position: fixed;
         top: 13em;
-        left: 37em;
-        background-color: red;
+        left: 30%;
         display: flex;
         width: 30em;
         justify-content: space-around;
-        img {
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        .profile-img {
             border-radius: 50%;
             background-color: white;
+            margin: 8px 0 10px 0;
+        }
+        .player-0-img {
+            border: 10px solid $pink;
+        }
+        .player-1-img {
+            border: 10px solid $blue;
+        }
+        .turn-marker {
+            width: 28px;
         }
     }
 }

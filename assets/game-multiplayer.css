@@ -8,41 +8,57 @@
   height: 100%;
   overflow: hidden; }
   .game-multiplayer nav {
+    display: flex;
+    justify-content: space-between;
     z-index: 5;
     position: fixed;
     top: 0px;
     width: 100%;
-    background: #3F385A;
+    background: #160746;
     height: 4em; }
+    .game-multiplayer nav button {
+      background: none;
+      border: none;
+      padding: 0 30px; }
+  .game-multiplayer .navbar-img {
+    width: 30px; }
   .game-multiplayer #orange-planet {
     top: 12em;
-    right: 51em;
+    right: 54%;
     width: 803px;
     position: relative;
     filter: invert(100%) sepia(0%);
     border-radius: 50%; }
   .game-multiplayer #purple-planet {
     top: -24em;
-    left: 73em;
+    left: 83%;
     width: 353px;
-    position: relative;
-    filter: invert(100%) sepia(0%) saturate(0%); }
+    position: relative; }
   .game-multiplayer #aqua-planet {
     top: -14em;
-    left: 71em;
+    left: 60%;
     width: 653px;
     position: relative; }
   .game-multiplayer .game-container {
     z-index: 5;
     position: fixed;
     top: 13em;
-    left: 37em;
-    background-color: red;
+    left: 30%;
     display: flex;
     width: 30em;
-    justify-content: space-around; }
-    .game-multiplayer .game-container img {
+    justify-content: space-around;
+    text-align: center;
+    color: white;
+    font-weight: bold; }
+    .game-multiplayer .game-container .profile-img {
       border-radius: 50%;
-      background-color: white; }
+      background-color: white;
+      margin: 8px 0 10px 0; }
+    .game-multiplayer .game-container .player-0-img {
+      border: 10px solid #e9488b; }
+    .game-multiplayer .game-container .player-1-img {
+      border: 10px solid #59deff; }
+    .game-multiplayer .game-container .turn-marker {
+      width: 28px; }
 
 /*# sourceMappingURL=game-multiplayer.css.map */
