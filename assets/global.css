@@ -33,6 +33,9 @@
       text-align: center;
       padding-top: 4px;
       width: 20%; }
+      @media (max-width: 420px) {
+        .game-multiplayer nav h1 {
+          width: 8em; } }
       .game-multiplayer nav h1 img {
         width: 15px;
         width: 40px;
@@ -46,16 +49,31 @@
     position: relative;
     filter: invert(100%) sepia(0%);
     border-radius: 50%; }
+    @media (max-width: 420px) {
+      .game-multiplayer #orange-planet {
+        width: 17em;
+        top: 16em;
+        right: 58%; } }
   .game-multiplayer #purple-planet {
     top: -24em;
     left: 75%;
     width: 353px;
     position: relative; }
+    @media (max-width: 420px) {
+      .game-multiplayer #purple-planet {
+        width: 8em;
+        top: 0em;
+        right: 0%; } }
   .game-multiplayer #aqua-planet {
     bottom: -31em;
     left: 22%;
     width: 653px;
     position: relative; }
+    @media (max-width: 420px) {
+      .game-multiplayer #aqua-planet {
+        width: 14em;
+        top: 8em;
+        left: 63%; } }
   .game-multiplayer .game-container {
     z-index: 5;
     position: fixed;
@@ -67,10 +85,18 @@
     text-align: center;
     color: white;
     font-weight: bold; }
+    @media (max-width: 420px) {
+      .game-multiplayer .game-container {
+        width: 18em;
+        top: 7em;
+        left: 18%; } }
     .game-multiplayer .game-container .profile-img {
       border-radius: 50%;
       background-color: white;
       margin: 8px 0 10px 0; }
+      @media (max-width: 420px) {
+        .game-multiplayer .game-container .profile-img {
+          width: 6em; } }
     .game-multiplayer .game-container .player-0,
     .game-multiplayer .game-container .player-1 {
       width: 120px; }
@@ -90,6 +116,11 @@
     left: 34%;
     border-radius: 17px;
     border-bottom: 10px solid black; }
+    @media (max-width: 420px) {
+      .game-multiplayer .board {
+        width: 15em;
+        height: 13em;
+        left: 13%; } }
     .game-multiplayer .board .grid {
       display: flex;
       flex-wrap: wrap;
@@ -118,6 +149,9 @@
     position: fixed;
     bottom: 0;
     left: 33%; }
+    @media (max-width: 420px) {
+      .game-multiplayer .score-0 {
+        left: 17%; } }
   .game-multiplayer .score-1 {
     background-color: #59deff;
     position: fixed;
@@ -132,6 +166,10 @@
     font-weight: bold;
     display: flex;
     align-items: center; }
+    @media (max-width: 420px) {
+      .game-multiplayer .score-0,
+      .game-multiplayer .score-1 {
+        width: 8em; } }
   .game-multiplayer .trophy-img {
     width: 20px;
     margin-right: 8px; }
