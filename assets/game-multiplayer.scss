@@ -67,6 +67,10 @@
         position: fixed;
         top: 13em;
         left: 30%;
+        @media (min-width:1440px) { 
+            top: 11em;
+            left: 35%;
+        }
         display: flex;
         width: 30em;
         justify-content: space-around;

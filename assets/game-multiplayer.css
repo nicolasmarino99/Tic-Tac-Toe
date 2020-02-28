@@ -67,6 +67,10 @@
     text-align: center;
     color: white;
     font-weight: bold; }
+    @media (min-width: 1440px) {
+      .game-multiplayer .game-container {
+        top: 11em;
+        left: 35%; } }
     .game-multiplayer .game-container .profile-img {
       border-radius: 50%;
       background-color: white;
