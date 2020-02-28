@@ -33,7 +33,7 @@
       text-align: center;
       padding-top: 4px;
       width: 20%; }
-      @media (max-width: 420px) {
+      @media screen and (max-width: 420px) {
         .game-multiplayer nav h1 {
           width: 8em; } }
       .game-multiplayer nav h1 img {
@@ -49,7 +49,12 @@
     position: relative;
     filter: invert(100%) sepia(0%);
     border-radius: 50%; }
-    @media (max-width: 420px) {
+    @media screen and (max-width: 1000px) {
+      .game-multiplayer #orange-planet {
+        width: 28em;
+        top: 19em;
+        right: 44%; } }
+    @media screen and (max-width: 420px) {
       .game-multiplayer #orange-planet {
         width: 17em;
         top: 16em;
@@ -59,7 +64,12 @@
     left: 75%;
     width: 353px;
     position: relative; }
-    @media (max-width: 420px) {
+    @media screen and (max-width: 1000px) {
+      .game-multiplayer #purple-planet {
+        width: 17em;
+        top: -2em;
+        right: 58%; } }
+    @media screen and (max-width: 420px) {
       .game-multiplayer #purple-planet {
         width: 8em;
         top: 0em;
@@ -69,7 +79,12 @@
     left: 22%;
     width: 653px;
     position: relative; }
-    @media (max-width: 420px) {
+    @media screen and (max-width: 1000px) {
+      .game-multiplayer #aqua-planet {
+        width: 23em;
+        top: 6em;
+        left: 42em; } }
+    @media screen and (max-width: 420px) {
       .game-multiplayer #aqua-planet {
         width: 14em;
         top: 8em;
@@ -85,7 +100,12 @@
     text-align: center;
     color: white;
     font-weight: bold; }
-    @media (max-width: 420px) {
+    @media screen and (max-width: 1000px) {
+      .game-multiplayer .game-container {
+        width: 28em;
+        top: 7em;
+        left: 27%; } }
+    @media screen and (max-width: 420px) {
       .game-multiplayer .game-container {
         width: 18em;
         top: 7em;
@@ -94,7 +114,7 @@
       border-radius: 50%;
       background-color: white;
       margin: 8px 0 10px 0; }
-      @media (max-width: 420px) {
+      @media only screen and (max-width: 420px) {
         .game-multiplayer .game-container .profile-img {
           width: 6em; } }
     .game-multiplayer .game-container .player-0,
@@ -116,7 +136,13 @@
     left: 34%;
     border-radius: 17px;
     border-bottom: 10px solid black; }
-    @media (max-width: 420px) {
+    @media only screen and (max-width: 1000px) {
+      .game-multiplayer .board {
+        width: 30em;
+        height: 22em;
+        left: 20%;
+        top: 35%; } }
+    @media only screen and (max-width: 420px) {
       .game-multiplayer .board {
         width: 15em;
         height: 13em;
@@ -149,7 +175,10 @@
     position: fixed;
     bottom: 0;
     left: 33%; }
-    @media (max-width: 420px) {
+    @media only screen and (max-width: 1000px) {
+      .game-multiplayer .score-0 {
+        left: 24%; } }
+    @media only screen and (max-width: 420px) {
       .game-multiplayer .score-0 {
         left: 17%; } }
   .game-multiplayer .score-1 {
@@ -166,7 +195,7 @@
     font-weight: bold;
     display: flex;
     align-items: center; }
-    @media (max-width: 420px) {
+    @media only screen and (max-width: 420px) {
       .game-multiplayer .score-0,
       .game-multiplayer .score-1 {
         width: 8em; } }
