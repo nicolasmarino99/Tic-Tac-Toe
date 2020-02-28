@@ -5,11 +5,44 @@
 .game-multiplayer {
   background: #483e6a;
   background: linear-gradient(180deg, #1f0575 40%, #c34b6c 88%);
-  height: 100%; }
+  height: 100%;
+  overflow: hidden; }
+  .game-multiplayer nav {
+    z-index: 5;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background: #3F385A;
+    height: 4em; }
   .game-multiplayer #orange-planet {
+    top: 12em;
+    right: 51em;
+    width: 803px;
+    position: relative;
     filter: invert(100%) sepia(0%);
-    border-radius: 50%;
-    -webkit-box-shadow: 0px 0px 37px 3px #FFFFFF;
-    box-shadow: 0px 0px 37px 3px #FFFFFF; }
+    border-radius: 50%; }
+  .game-multiplayer #purple-planet {
+    top: -24em;
+    left: 73em;
+    width: 353px;
+    position: relative;
+    filter: invert(100%) sepia(0%) saturate(0%); }
+  .game-multiplayer #aqua-planet {
+    top: -14em;
+    left: 71em;
+    width: 653px;
+    position: relative; }
+  .game-multiplayer .game-container {
+    z-index: 5;
+    position: fixed;
+    top: 13em;
+    left: 37em;
+    background-color: red;
+    display: flex;
+    width: 30em;
+    justify-content: space-around; }
+    .game-multiplayer .game-container img {
+      border-radius: 50%;
+      background-color: white; }
 
 /*# sourceMappingURL=game-multiplayer.css.map */
