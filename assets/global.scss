@@ -1,5 +1,6 @@
 @import 'game-multiplayer';
 @import 'menu';
+@import 'variables';
 
 * {
     margin: 0;
@@ -13,4 +14,16 @@ html {
 
 body {
     height: 100%;
+}
+
+.pink-color {
+    color: $pink;
+}
+
+.blue-color {
+    color: $blue;
+}
+
+.hidden {
+    display: none;
 }

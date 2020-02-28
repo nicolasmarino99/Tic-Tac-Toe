@@ -2,11 +2,15 @@
   --color: #ef6eae;
   --hover: #ef8f6e; }
 
-.hidden {
-  display: none; }
-
 .game-multiplayer {
-  background-color: pink; }
+  background: #483e6a;
+  background: linear-gradient(180deg, #1f0575 40%, #c34b6c 88%);
+  height: 100%; }
+  .game-multiplayer #orange-planet {
+    filter: invert(100%) sepia(0%);
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 0px 37px 3px #FFFFFF;
+    box-shadow: 0px 0px 37px 3px #FFFFFF; }
 
 .pulse {
   --color: #ef6eae;
@@ -86,6 +90,20 @@
         background-color: #e9488b; }
       .menu .new-game #menu-btns #rules-btn {
         background-color: #FBC625; }
+  .menu .form {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 15px; }
+    .menu .form .field {
+      flex-direction: column;
+      text-align: center; }
+      .menu .form .field label {
+        font-size: 20px;
+        font-weight: bold; }
+
+.pulse {
+  --color: #ef6eae;
+  --hover: #ef8f6e; }
 
 * {
   margin: 0;
@@ -97,5 +115,14 @@ html {
 
 body {
   height: 100%; }
+
+.pink-color {
+  color: #e9488b; }
+
+.blue-color {
+  color: #59deff; }
+
+.hidden {
+  display: none; }
 
 /*# sourceMappingURL=global.css.map */

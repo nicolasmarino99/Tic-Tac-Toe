@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAaI,MAAY;EACV,OAAO,CAAC,QAAU;EAClB,OAAO,CAAC,QAA6B;;ACb3C,OAAQ;EACJ,OAAO,EAAE,IAAI;;AAGjB,iBAAkB;EACd,gBAAgB,EAAE,IAAI",
+"mappings": "AAaI,MAAY;EACV,OAAO,CAAC,QAAU;EAClB,OAAO,CAAC,QAA6B;;ACb3C,iBAAkB;EACd,UAAU,EAAE,OAAc;EAC1B,UAAU,EAAE,iDAAsD;EAClE,MAAM,EAAE,IAAI;EACZ,gCAAe;IACX,MAAM,EAAE,sBAAsB;IAC9B,aAAa,EAAE,GAAG;IAClB,kBAAkB,EAAE,wBAAwB;IAC5C,UAAU,EAAE,wBAAwB",
 "sources": ["variables.scss","game-multiplayer.scss"],
 "names": [],
 "file": "game-multiplayer.css"
