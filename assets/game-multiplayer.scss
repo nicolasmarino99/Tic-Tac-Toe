@@ -44,7 +44,7 @@
     }
     #orange-planet {
         top: 12em;
-        right: 54%;
+        right: 34%;
         width: 803px;
         position: relative;
         filter: invert(100%) sepia(0%);
@@ -52,24 +52,24 @@
     }
     #purple-planet {
         top: -24em;
-        left: 83%;
+        left: 75%;
         width: 353px;
         position: relative;
     }
     #aqua-planet {
-        top: -14em;
-        left: 60%;
+        bottom: -31em;
+        left: 22%;
         width: 653px;
-        position: relative;   
+        position: relative;  
     }
     .game-container {
         z-index: 5;
         position: fixed;
-        top: 13em;
-        left: 30%;
-        @media (min-width:1440px) { 
-            top: 11em;
-            left: 35%;
+        top: 11em;
+        left: 38%;
+        @media (min-width:140px) { 
+            //top: 11em;
+            //left: 38%;
         }
         display: flex;
         width: 30em;
@@ -103,7 +103,7 @@
         margin: 50px;
         position: fixed;
         top: 40%;
-        left: 26%;
+        left: 34%;
         border-radius: 17px;
         border-bottom: 10px solid black;
         
@@ -149,7 +149,7 @@
         background-color: $blue;
         position: fixed;
         bottom: 0;
-        left: 55%;
+        left: 59%;
     }
     .score-0,
     .score-1 {
