@@ -27,12 +27,9 @@ const playerFactory = (name) => {
 
 function setName(name0,name1) {
     const player0 = playerFactory(name0) 
-
     const player1 = playerFactory(name1) 
-
-console.log(player0,player1)
-document.getElementById('name-0').innerHTML = player0.name
-document.getElementById('name-1').innerHTML = player1.name
+    document.getElementById('name-0').innerHTML = player0.name
+    document.getElementById('name-1').innerHTML = player1.name
 
 }
 
@@ -42,7 +39,6 @@ namesForm.addEventListener('keypress', (e) => {
     player1_name = document.querySelector('[name="name-1"]').value;
     toggleHidden(menuContainer);
     toggleHidden(gameMultiplayer);
-    console.log(player0_name)
     setName(player0_name,player1_name)
     
     }
