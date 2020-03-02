@@ -2,7 +2,7 @@
   --color: #ef6eae;
   --hover: #ef8f6e; }
 
-.menu {
+#menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,24 +10,24 @@
   height: 100%;
   background: #483e6a;
   background: linear-gradient(180deg, #1f0575 40%, #c34b6c 88%); }
-  .menu .new-game {
+  #menu .new-game {
     display: flex;
     align-items: center;
     flex-direction: column; }
-    .menu .new-game #logo {
+    #menu .new-game #logo {
       z-index: 3;
       font-size: 100px;
       font-weight: bolder;
       line-height: 80px;
       color: white; }
-      .menu .new-game #logo #pink-color {
+      #menu .new-game #logo #pink-color {
         color: #e9488b; }
-      .menu .new-game #logo #blue-color {
+      #menu .new-game #logo #blue-color {
         color: #59deff; }
-    .menu .new-game #menu-btns {
+    #menu .new-game #menu-btns {
       margin-top: 4em;
       z-index: 3; }
-      .menu .new-game #menu-btns button {
+      #menu .new-game #menu-btns button {
         padding: 0 1em;
         display: flex;
         justify-content: baseline;
@@ -42,18 +42,18 @@
         -moz-box-shadow: 0px 44px 68px -12px rgba(0, 0, 0, 0.75);
         box-shadow: 0px 44px 68px -12px rgba(0, 0, 0, 0.75); }
         @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-          .menu .new-game #menu-btns button {
+          #menu .new-game #menu-btns button {
             height: 5em;
             width: 22em; } }
-        .menu .new-game #menu-btns button p {
+        #menu .new-game #menu-btns button p {
           color: white;
           font-size: 21px;
           font-weight: bold;
           margin-left: 20px; }
-        .menu .new-game #menu-btns button img {
+        #menu .new-game #menu-btns button img {
           width: 50px;
           filter: invert(100%) sepia(0%); }
-        .menu .new-game #menu-btns button:hover, .menu .new-game #menu-btns button:focus {
+        #menu .new-game #menu-btns button:hover, #menu .new-game #menu-btns button:focus {
           cursor: pointer;
           animation: pulse 1s;
           box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
@@ -62,28 +62,28 @@
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 var(--hover); } }
-      .menu .new-game #menu-btns #multiplayer-btn {
+      #menu .new-game #menu-btns #multiplayer-btn {
         background-color: #59deff; }
-        .menu .new-game #menu-btns #multiplayer-btn #logo {
+        #menu .new-game #menu-btns #multiplayer-btn #logo {
           font-size: 21px;
           line-height: 23px;
           margin: 10px; }
-          .menu .new-game #menu-btns #multiplayer-btn #logo #pink-color {
+          #menu .new-game #menu-btns #multiplayer-btn #logo #pink-color {
             color: white; }
-          .menu .new-game #menu-btns #multiplayer-btn #logo #blue-color {
+          #menu .new-game #menu-btns #multiplayer-btn #logo #blue-color {
             color: white; }
-      .menu .new-game #menu-btns #youvsai-btn {
+      #menu .new-game #menu-btns #youvsai-btn {
         background-color: #e9488b; }
-      .menu .new-game #menu-btns #rules-btn {
+      #menu .new-game #menu-btns #rules-btn {
         background-color: #FBC625; }
-  .menu #form {
+  #menu #form {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 15px; }
-    .menu #form .field {
+    #menu #form .field {
       flex-direction: column;
       text-align: center; }
-      .menu #form .field label {
+      #menu #form .field label {
         font-size: 20px;
         font-weight: bold; }
 
