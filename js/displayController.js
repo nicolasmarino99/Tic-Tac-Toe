@@ -23,6 +23,12 @@ const displayCtrl = (function() {
     document.getElementById('name-1').innerHTML = player1.name;
   }
 
+  const makeMove = () => {
+    gridElement.addEventListener('click', ()=> {
+      boardGame.setMovement(gridElement)
+    })
+  }
+
   return {
     
     toggleHidden: (element) => {

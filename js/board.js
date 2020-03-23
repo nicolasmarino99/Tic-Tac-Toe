@@ -1,33 +1,14 @@
-const boardGame = (() => {
+const boardGame = (function() {
+  
   const newGame = () => { 
-    new Array(9).fill(' ') 
+    return new Array(9).fill(' ') 
   }
 
-
-  const setMovement =  (element) => {
-    element.innerHTML = 'X'
-     
+  const setMovement =  () => {
+    
   } 
 
-  const displayBoard = (arr) => {
-    arr.forEach((cell, i) => {
-      const gridElement = document.createElement('div');
-      const parentElement = document.getElementById('grid');
-      gridElement.innerHTML = cell;
-      parentElement.appendChild(gridElement);
-      gridElement.setAttribute('id',`grid-${i+1}`)
-      gridElement.addEventListener('click', ()=> {
-        setMovement(gridElement)
-      })
-
-    });
-  }
-
-
-
-  return {newGame, displayBoard}
-  
-
-});
+  return { newGame, setMovement }
+})();
 
 export { boardGame };

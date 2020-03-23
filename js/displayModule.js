@@ -4,6 +4,8 @@ import { playerFactory } from './players.js';
 const displayCtrl = (function() {
     let playerName0;
     let playerName1;
+    let gridElement;
+    let parentElement;
   
     /* Buttons selectors */
     const multiplayerButton = document.getElementById('multiplayer-btn');
@@ -23,6 +25,16 @@ const displayCtrl = (function() {
       document.getElementById('name-1').innerHTML = player1.name;
     }
 
+    const displayBoard = (arr) => {
+      arr.forEach((cell, i) => {
+        gridElement = document.createElement('div');
+        parentElement = document.getElementById('grid');
+        gridElement.innerHTML = cell;
+        parentElement.appendChild(gridElement);
+        gridElement.setAttribute('id',`grid-${i+1}`)
+      });
+    }
+
     return {
       
       toggleHidden: (element) => {
@@ -30,22 +42,22 @@ const displayCtrl = (function() {
       },
   
       getNames: () => {
-        if (event.key === 'Enter') {
-          playerName0 = document.querySelector('[name="name-0"]').value;
-          playerName1 = document.querySelector('[name="name-1"]').value;
-          displayCtrl.toggleHidden(menuContainer);
-          displayCtrl.toggleHidden(gameMultiplayer);
-          setName(playerName0, playerName1);
-        }
+        playerName0 = document.querySelector('[name="name-0"]').value;
+        playerName1 = document.querySelector('[name="name-1"]').value;
+        displayCtrl.toggleHidden(menuContainer);
+        displayCtrl.toggleHidden(gameMultiplayer);
+        setName(playerName0, playerName1);
       },
+      
       gameInit: () => {
-        displayCtrl.getNames()
-        let boardArray = boardGame.newGame()
-        boardGame.displayBoard(boardArray)
-        console.log(boardArray)
+        if (event.key === 'Enter') {
+          displayCtrl.getNames()
+          let boardArray = boardGame.newGame()
+          displayBoard(boardArray)
+          console.log(boardArray)
+        }
       }  
     }
-  
   })();
   
   
@@ -53,10 +65,9 @@ const displayCtrl = (function() {
   
   document.getElementById('multiplayer-btn').addEventListener('click',  () => {
     displayCtrl.toggleHidden(document.getElementById('form'))()
-    
   });
   
   document.getElementById('form').addEventListener('keypress', displayCtrl.gameInit);
 
 
-export { displayCtrl }
+//export { displayCtrl }
