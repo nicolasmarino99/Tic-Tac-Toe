@@ -25,18 +25,24 @@ const displayCtrl = (function() {
 
     return {
       
-      toggleHidden: () => {
-        document.getElementById('form').classList.toggle('hidden');
+      toggleHidden: (element) => {
+        element.classList.toggle('hidden');
       },
   
       getNames: () => {
         if (event.key === 'Enter') {
           playerName0 = document.querySelector('[name="name-0"]').value;
           playerName1 = document.querySelector('[name="name-1"]').value;
-          toggleHidden(menuContainer);
-          toggleHidden(gameMultiplayer);
+          displayCtrl.toggleHidden(menuContainer);
+          displayCtrl.toggleHidden(gameMultiplayer);
           setName(playerName0, playerName1);
         }
+      },
+      gameInit: () => {
+        displayCtrl.getNames()
+        let boardArray = boardGame.newGame()
+        boardGame.displayBoard(boardArray)
+        console.log(boardArray)
       }  
     }
   
@@ -45,10 +51,12 @@ const displayCtrl = (function() {
   
   /*   ACTIONS TO BUTTONS   */
   
-  document.getElementById('multiplayer-btn').addEventListener('click', displayCtrl.toggleHidden);
+  document.getElementById('multiplayer-btn').addEventListener('click',  () => {
+    displayCtrl.toggleHidden(document.getElementById('form'))()
+    
+  });
   
-  document.getElementById('form').addEventListener('keypress', displayCtrl.getNames);
+  document.getElementById('form').addEventListener('keypress', displayCtrl.gameInit);
 
-  boardGame();
 
 export { displayCtrl }

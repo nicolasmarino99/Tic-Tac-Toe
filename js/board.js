@@ -1,13 +1,15 @@
 const boardGame = (() => {
-  const board = new Array(9).fill(' ');
+  const newGame = () => { 
+    new Array(9).fill(' ') 
+  }
 
 
-  function setMovement(element) {
+  const setMovement =  (element) => {
     element.innerHTML = 'X'
      
   } 
 
-  function displayBoard(arr) {
+  const displayBoard = (arr) => {
     arr.forEach((cell, i) => {
       const gridElement = document.createElement('div');
       const parentElement = document.getElementById('grid');
@@ -22,8 +24,8 @@ const boardGame = (() => {
   }
 
 
-  displayBoard(board);
 
+  return {newGame, displayBoard}
   
 
 });
