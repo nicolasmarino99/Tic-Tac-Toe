@@ -1,6 +1,6 @@
 import { boardGame } from './board.js';
 import { playerFactory } from './players.js';
-
+ 
 const displayCtrl = (function() {
     let playerName0;
     let playerName1;
@@ -19,10 +19,8 @@ const displayCtrl = (function() {
     const gameMultiplayer = document.getElementById('game-multiplayer');
   
     const setName = (name0, name1) => {
-      const player0 = playerFactory(name0);
-      const player1 = playerFactory(name1);
-      document.getElementById('name-0').innerHTML = player0.name;
-      document.getElementById('name-1').innerHTML = player1.name;
+      document.getElementById('name-0').innerHTML = name0;
+      document.getElementById('name-1').innerHTML = name1;
     }
 
     const displayBoard = (arr) => {
@@ -52,11 +50,19 @@ const displayCtrl = (function() {
       gameInit: () => {
         if (event.key === 'Enter') {
           displayCtrl.getNames()
-          let boardArray = boardGame.newGame()
+          boardGame.newGame(playerName0,playerName1)
+          let boardArray = boardGame.getBoard()
+          
           displayBoard(boardArray)
           console.log(boardArray)
         }
-      }  
+      }, 
+      
+      getPlayer: () => {
+        player0
+        player1
+      }
+      
     }
   })();
   
