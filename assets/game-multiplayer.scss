@@ -46,6 +46,20 @@
     .navbar-img {
         width: 30px;
     }
+    #message-box {
+        background-color: #3d2c75;
+        z-index: 5;
+        position: fixed;
+        top: 6em;
+        left: 34%;
+        display: flex;
+        width: 38em;
+        height: 3em;
+        border-radius: 5px;
+        border-top: 5px solid $navblue;
+        padding: 10px 20px;
+        color: white;
+    }
     #orange-planet {
         top: 12em;
         right: 34%;

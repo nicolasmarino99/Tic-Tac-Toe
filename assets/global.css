@@ -42,6 +42,19 @@
         margin-right: 10px; }
   #game-multiplayer .navbar-img {
     width: 30px; }
+  #game-multiplayer #message-box {
+    background-color: #3d2c75;
+    z-index: 5;
+    position: fixed;
+    top: 6em;
+    left: 34%;
+    display: flex;
+    width: 38em;
+    height: 3em;
+    border-radius: 5px;
+    border-top: 5px solid #160746;
+    padding: 10px 20px;
+    color: white; }
   #game-multiplayer #orange-planet {
     top: 12em;
     right: 34%;

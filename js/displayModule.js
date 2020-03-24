@@ -34,17 +34,41 @@ const displayCtrl = (function() {
       });
     }
 
+    const displayMessage = (type) => {
+      let messageBox = document.querySelector('#message-box')
+      messageBox.classList.toggle('hidden')
+      if(type === 'turn') {
+         messageBox.textContent = `turn.` 
+      } else if(type === 'victory') {
+          messageBox.textContent = `${boardGame.getCurrentPlayer().name} is the winner!`
+      } else if(type === 'draw') {
+          messageBox.textContent = `It's a draw.`
+      }  
+    }
+
     const makeMove = () => {
       parentElement.addEventListener('click', () => {
-        let position = parseInt(event.target.id.split('-')[1])
-        let mark = boardGame.setMovement(position)
+        if (boardGame.getStatus() == 'on') {
+          let position = parseInt(event.target.id.split('-')[1])
+          let mark = boardGame.setMovement(position)
 
-        if (mark != null) {
-          event.target.textContent = mark
+          if (mark != null) {
+            event.target.textContent = mark
+          }
+
+          console.log(boardGame.getStatus())
+
+          if (boardGame.getStatus() == 'victory') {
+            displayMessage("victory")  
+          } else if (boardGame.getStatus() == 'draw') {
+            displayMessage("draw")
+          }
+
+          turnMarker0.classList.toggle('hidden')
+          turnMarker1.classList.toggle('hidden')
+
+          console.log(boardGame.getBoard())
         }
-
-        turnMarker0.classList.toggle('hidden')
-        turnMarker1.classList.toggle('hidden')
       })
     }
 
@@ -69,8 +93,6 @@ const displayCtrl = (function() {
           let boardArray = boardGame.getBoard()
           displayBoard(boardArray)
           makeMove()
-
-          console.log(boardArray)
         }
       }, 
       
