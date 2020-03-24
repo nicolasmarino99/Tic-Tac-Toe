@@ -1,5 +1,5 @@
-const playerFactory = (name) => { 
-    return { name };
+const playerFactory = (name, mark) => { 
+    return { name, mark };
 };
 
 
