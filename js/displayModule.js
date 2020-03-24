@@ -7,14 +7,8 @@ const displayCtrl = (function() {
     let parentElement;
     let boardArray
   
-    /* Buttons selectors */
-    const multiplayerButton = document.getElementById('multiplayer-btn');
-    // const aiButton = document.getElementById
-    // const rulesButton = document.getElementById
+    /* DOM selectors */
   
-    /* others selectors */
-  
-    const namesForm = document.getElementById('form');
     const menuContainer = document.getElementById('menu');
     const gameMultiplayer = document.getElementById('game-multiplayer');
     const turnMarker0 = document.querySelector('.turn-0')
@@ -34,6 +28,11 @@ const displayCtrl = (function() {
         parentElement.appendChild(gridElement);
         gridElement.setAttribute('id',`grid-${i}`)
       });
+    }
+
+    const emptyCells = () => {
+      let cellArray = [...parentElement.children]
+      cellArray.forEach(cell => cell.textContent = ' ')
     }
 
     const displayMessage = (type) => {
@@ -57,7 +56,6 @@ const displayCtrl = (function() {
       } else {
         score1.textContent = `${boardGame.getCurrentPlayer().score} won matches`
       }
-
     }
 
     const makeMove = () => {
@@ -75,15 +73,12 @@ const displayCtrl = (function() {
           if (boardGame.getStatus() == 'victory') {
             displayMessage("victory")
             scoreCounter()
-
           } else if (boardGame.getStatus() == 'draw') {
             displayMessage("draw")
           }
 
           turnMarker0.classList.toggle('hidden')
           turnMarker1.classList.toggle('hidden')
-
-          console.log(boardGame.getBoard())
         }
       })
     }
@@ -101,28 +96,33 @@ const displayCtrl = (function() {
         displayCtrl.toggleHidden(gameMultiplayer);
         setName(playerName0, playerName1);
       },
-      
-      cleanBoard: () => {
-        boardGame.newGame(playerName0,playerName1)
-        boardArray = boardGame.getBoard()
-        displayBoard(boardArray)
-        makeMove()
-        
-      },
 
       gameInit: () => {
         if (event.key === 'Enter') {
           displayCtrl.getNames()
-          displayCtrl.cleanBoard()
+          boardGame.newGame(playerName0,playerName1)
+          boardArray = boardGame.getBoard()
+          displayBoard(boardArray)
+          makeMove()
+        }
+      },
+      
+      cleanBoard: () => {
+        boardGame.newGame(playerName0,playerName1)
+        boardArray = boardGame.getBoard()
+        emptyCells()
+        displayCtrl.toggleHidden(document.querySelector('#message-box'))
+      },
+
+      reload: (e) => {
+        var e=window.event||e;
+        //do stuff
+        if(e.preventDefault){
+          e.preventDefault()
+        } else {
+          e.returnValue=false
         }
       }
-      
-      
-      
-    
-      
-
-
     }
   })();
   
@@ -132,9 +132,5 @@ const displayCtrl = (function() {
   document.getElementById('multiplayer-btn').addEventListener('click',  () => {
     displayCtrl.toggleHidden(document.getElementById('form'))()
   });
-  
   document.getElementById('form').addEventListener('keypress', displayCtrl.gameInit);
-  
-  document.querySelector('#replay').addEventListener('click', displayCtrl.cleanBoard)
-
-//export { displayCtrl }
+  document.querySelector('#replay').addEventListener('click', displayCtrl.cleanBoard);

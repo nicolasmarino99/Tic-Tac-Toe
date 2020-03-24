@@ -9,11 +9,14 @@ const boardGame = (function() {
 
   const newGame = (name0,name1) => { 
     gameStatus = "on"
-    player0 = playerFactory(name0, 'X');
-    player1 = playerFactory(name1, 'O');
-    board =  new Array(9).fill(' ') 
+    if (player0 == null) {
+      player0 = playerFactory(name0, 'X');
+      player1 = playerFactory(name1, 'O');
+    }
+    console.log(player0)
+    board =  board == null ? new Array(9).fill(' ') : board.fill(' ')
+    console.log(board)
     currentPlayer = player0
-    
   }
 
   const draw = () => {
@@ -40,6 +43,7 @@ const boardGame = (function() {
   }
 
   const setMovement = (position) => {
+    console.log(`board[position]: ${board[position]}`)
     if(board[position] == ' ' && gameStatus == 'on') {
       board[position] = currentPlayer.mark
       
@@ -55,6 +59,7 @@ const boardGame = (function() {
       return board[position]
 
     } else {
+      console.log('going to else')
       alert('Choose an empty position')
     }
   }
