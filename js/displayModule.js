@@ -5,6 +5,7 @@ const displayCtrl = (function() {
     let playerName1;
     let gridElement;
     let parentElement;
+    let boardArray
   
     /* Buttons selectors */
     const multiplayerButton = document.getElementById('multiplayer-btn');
@@ -18,6 +19,7 @@ const displayCtrl = (function() {
     const gameMultiplayer = document.getElementById('game-multiplayer');
     const turnMarker0 = document.querySelector('.turn-0')
     const turnMarker1 = document.querySelector('.turn-1')
+    
   
     const setName = (name0, name1) => {
       document.getElementById('name-0').innerHTML = name0;
@@ -46,6 +48,18 @@ const displayCtrl = (function() {
       }  
     }
 
+    const scoreCounter = () => {
+      const score0 = document.querySelector('#score-0')
+      const score1 = document.querySelector('#score-1')
+      boardGame.getCurrentPlayer().score += 1
+      if (boardGame.getCurrentPlayer().mark == 'X') {
+        score0.textContent = `${boardGame.getCurrentPlayer().score} won matches`
+      } else {
+        score1.textContent = `${boardGame.getCurrentPlayer().score} won matches`
+      }
+
+    }
+
     const makeMove = () => {
       parentElement.addEventListener('click', () => {
         if (boardGame.getStatus() == 'on') {
@@ -59,7 +73,9 @@ const displayCtrl = (function() {
           console.log(boardGame.getStatus())
 
           if (boardGame.getStatus() == 'victory') {
-            displayMessage("victory")  
+            displayMessage("victory")
+            scoreCounter()
+
           } else if (boardGame.getStatus() == 'draw') {
             displayMessage("draw")
           }
@@ -71,7 +87,7 @@ const displayCtrl = (function() {
         }
       })
     }
-
+    
     return {
       
       toggleHidden: (element) => {
@@ -86,21 +102,27 @@ const displayCtrl = (function() {
         setName(playerName0, playerName1);
       },
       
+      cleanBoard: () => {
+        boardGame.newGame(playerName0,playerName1)
+        boardArray = boardGame.getBoard()
+        displayBoard(boardArray)
+        makeMove()
+        
+      },
+
       gameInit: () => {
         if (event.key === 'Enter') {
           displayCtrl.getNames()
-          boardGame.newGame(playerName0,playerName1)
-          let boardArray = boardGame.getBoard()
-          displayBoard(boardArray)
-          makeMove()
+          displayCtrl.cleanBoard()
         }
-      }, 
-      
-      getPlayer: () => {
-        player0
-        player1
       }
       
+      
+      
+    
+      
+
+
     }
   })();
   
@@ -113,5 +135,6 @@ const displayCtrl = (function() {
   
   document.getElementById('form').addEventListener('keypress', displayCtrl.gameInit);
   
+  document.querySelector('#replay').addEventListener('click', displayCtrl.cleanBoard)
 
 //export { displayCtrl }

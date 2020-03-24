@@ -11,9 +11,9 @@ const boardGame = (function() {
     gameStatus = "on"
     player0 = playerFactory(name0, 'X');
     player1 = playerFactory(name1, 'O');
-    board = new Array(9).fill(' ') 
+    board =  new Array(9).fill(' ') 
     currentPlayer = player0
-  
+    
   }
 
   const draw = () => {
@@ -22,7 +22,7 @@ const boardGame = (function() {
 
   const victory = () => {
     let winCombinations = [[0, 1, 2],[3, 4, 5],[6, 7, 8],
-                           [0, 3, 7],[1, 4, 7],[2, 5, 8],
+                           [0, 3, 6],[1, 4, 7],[2, 5, 8],
                            [0, 4, 8],[2, 4, 6]] 
     for (let i = 0; i < winCombinations.length; i += 1) {
       if (board[winCombinations[i][0]] === currentPlayer.mark
@@ -59,6 +59,7 @@ const boardGame = (function() {
     }
   }
 
+  
   const getBoard = () => {
     return board
   }
