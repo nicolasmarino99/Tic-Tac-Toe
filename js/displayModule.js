@@ -54,7 +54,7 @@ const displayCtrl = (function () {
     const score0 = document.querySelector('#score-0');
     const score1 = document.querySelector('#score-1');
     boardGame.getCurrentPlayer().score += 1;
-    if (boardGame.getCurrentPlayer().mark == 'X') {
+    if (boardGame.getCurrentPlayer().mark === 'X') {
       score0.textContent = `${boardGame.getCurrentPlayer().score} won matches`;
     } else {
       score1.textContent = `${boardGame.getCurrentPlayer().score} won matches`;
