@@ -1,6 +1,6 @@
-const playerFactory = (name, mark, score) => { 
-    score = 0
-    return { name, mark, score };
+export const playerFactory = (name, mark, score) => {
+  score = 0;
+  return { name, mark, score };
 };
 
-export { playerFactory };
+export default playerFactory;

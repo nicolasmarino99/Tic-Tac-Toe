@@ -1,83 +1,70 @@
+// eslint-disable-next-line import/extensions
 import { playerFactory } from './players.js';
 
-const boardGame = (function() {
-  let player0
-  let player1
-  let currentPlayer
-  let board
-  let gameStatus
+// eslint-disable-next-line func-names
+const boardGame = (function () {
+  let player0;
+  let player1;
+  let currentPlayer;
+  let board;
+  let gameStatus;
 
-  const newGame = (name0,name1) => { 
-    gameStatus = "on"
+  const newGame = (name0, name1) => {
+    gameStatus = 'on';
     if (player0 == null) {
       player0 = playerFactory(name0, 'X');
       player1 = playerFactory(name1, 'O');
     }
-    console.log(player0)
-    board =  board == null ? new Array(9).fill(' ') : board.fill(' ')
-    console.log(board)
-    currentPlayer = player0
-  }
+    board = board == null ? new Array(9).fill(' ') : board.fill(' ');
+    currentPlayer = player0;
+  };
 
-  const draw = () => {
-    return board.every(el =>  el != ' ' )
-  }
+  const draw = () => board.every(el => el !== ' ');
 
+  // eslint-disable-next-line consistent-return
   const victory = () => {
-    let winCombinations = [[0, 1, 2],[3, 4, 5],[6, 7, 8],
-                           [0, 3, 6],[1, 4, 7],[2, 5, 8],
-                           [0, 4, 8],[2, 4, 6]] 
+    const winCombinations = [[0, 1, 2], [3, 4, 5], [6, 7, 8],
+      [0, 3, 6], [1, 4, 7], [2, 5, 8],
+      [0, 4, 8], [2, 4, 6]];
     for (let i = 0; i < winCombinations.length; i += 1) {
       if (board[winCombinations[i][0]] === currentPlayer.mark
           && board[winCombinations[i][1]] === currentPlayer.mark
           && board[winCombinations[i][2]] === currentPlayer.mark) {
-          return true;
+        return true;
       }
     }
-  }
+  };
 
   const changePlayer = () => {
-    if (gameStatus == 'on') {
-      currentPlayer = currentPlayer == player0 ? player1 : player0
+    if (gameStatus === 'on') {
+      currentPlayer = currentPlayer === player0 ? player1 : player0;
     }
-  }
+  };
 
   const setMovement = (position) => {
-    console.log(`board[position]: ${board[position]}`)
-    if(board[position] == ' ' && gameStatus == 'on') {
-      board[position] = currentPlayer.mark
-      
-      if ( victory() ) {
-        console.log(`board victory: ${gameStatus}`)
-        gameStatus = "victory"
-      } else if ( draw() ) {
-        console.log(`board draw: ${gameStatus}`)
-        gameStatus = "draw"
+    if (board[position] === ' ' && gameStatus === 'on') {
+      board[position] = currentPlayer.mark;
+
+      if (victory()) {
+        gameStatus = 'victory';
+      } else if (draw()) {
+        gameStatus = 'draw';
       }
 
-      changePlayer()
-      return board[position]
-
-    } else {
-      console.log('going to else')
-      alert('Choose an empty position')
+      changePlayer();
+      return board[position];
     }
-  }
+  };
 
-  
-  const getBoard = () => {
-    return board
-  }
+  const getBoard = () => board;
 
-  const getStatus = () => {
-    return gameStatus
-  }
+  const getStatus = () => gameStatus;
 
-  const getCurrentPlayer = () => {
-    return currentPlayer
-  }
+  const getCurrentPlayer = () => currentPlayer;
 
-  return { newGame, setMovement, getBoard, getStatus, getCurrentPlayer }
-})();
+  return {
+    newGame, setMovement, getBoard, getStatus, getCurrentPlayer,
+  };
+}());
 
-export { boardGame };
+export default boardGame;
