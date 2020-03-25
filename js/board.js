@@ -41,6 +41,7 @@ const boardGame = (function () {
     }
   };
 
+  // eslint-disable-next-line consistent-return
   const setMovement = (position) => {
     if (board[position] === ' ' && gameStatus === 'on') {
       board[position] = currentPlayer.mark;
