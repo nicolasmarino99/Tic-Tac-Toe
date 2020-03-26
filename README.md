@@ -1,6 +1,6 @@
 # JavaScript Tic-Tac-Toe
 
-> In this project we created a Tic-Tac-Toe game. It has the following fuctionalities:
+In this project we created a Tic-Tac-Toe game. It has the following fuctionalities:
 - player creation;
 - score victories;
 - user interface.
