@@ -1,5 +1,6 @@
 // eslint-disable-next-line import/extensions
 import boardGame from './board.js';
+import gameModule from './gameModule.js';
 
 // eslint-disable-next-line func-names
 const displayCtrl = (function () {
@@ -7,7 +8,6 @@ const displayCtrl = (function () {
   let playerName1;
   let gridElement;
   let parentElement;
-  let boardArray;
 
   /* DOM selectors */
 
@@ -61,30 +61,6 @@ const displayCtrl = (function () {
     }
   };
 
-  const makeMove = () => {
-    parentElement.addEventListener('click', () => {
-      if (boardGame.getStatus() === 'on') {
-        // eslint-disable-next-line no-restricted-globals
-        const position = parseInt(event.target.id.split('-')[1], 10);
-        const mark = boardGame.setMovement(position);
-
-        if (mark != null) {
-          // eslint-disable-next-line no-restricted-globals
-          event.target.textContent = mark;
-          turnMarker0.classList.toggle('hidden');
-          turnMarker1.classList.toggle('hidden');
-        }
-
-        if (boardGame.getStatus() === 'victory') {
-          displayMessage('victory');
-          scoreCounter();
-        } else if (boardGame.getStatus() === 'draw') {
-          displayMessage('draw');
-        }
-      }
-    });
-  };
-
   return {
 
     toggleHidden: (element) => {
@@ -97,17 +73,7 @@ const displayCtrl = (function () {
       displayCtrl.toggleHidden(menuContainer);
       displayCtrl.toggleHidden(gameMultiplayer);
       setName(playerName0, playerName1);
-    },
-
-    gameInit: () => {
-      // eslint-disable-next-line no-restricted-globals
-      if (event.key === 'Enter') {
-        displayCtrl.getNames();
-        boardGame.newGame(playerName0, playerName1);
-        boardArray = boardGame.getBoard();
-        displayBoard(boardArray);
-        makeMove();
-      }
+      return [playerName0, playerName1]
     },
 
     cleanBoard: () => {
@@ -116,6 +82,8 @@ const displayCtrl = (function () {
       emptyCells();
       displayCtrl.toggleHidden(document.querySelector('#message-box'));
     },
+
+    displayBoard
   };
 }());
 
@@ -125,5 +93,7 @@ const displayCtrl = (function () {
 document.getElementById('multiplayer-btn').addEventListener('click', () => {
   displayCtrl.toggleHidden(document.getElementById('form'))();
 });
-document.getElementById('form').addEventListener('keypress', displayCtrl.gameInit);
+document.getElementById('form').addEventListener('keypress', gameModule.gameInit);
 document.querySelector('#replay').addEventListener('click', displayCtrl.cleanBoard);
+
+export default displayCtrl;
