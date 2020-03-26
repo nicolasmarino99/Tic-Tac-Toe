@@ -18,7 +18,7 @@ You can find the original description in [The Odin Project](https://www.theodinp
 
 ## Live Demo
 
-[Live Demo Link](https://rawcdn.githack.com/nicolasmarino99/Tic-Tac-Toe/3e25b8e70780e3a44724cf21789a364aa5f8a11e/index.html)
+[Live Demo Link](https://rawcdn.githack.com/nicolasmarino99/Tic-Tac-Toe/c5dc04b422b4ebe2c9ff7c3f26bce5ca9d71d431/index.html)
 
 
 ## Getting Started
