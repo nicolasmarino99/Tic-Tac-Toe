@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/extensions
-import boardGame from './board.js';
+import {boardGame} from './board.js';
 // eslint-disable-next-line import/extensions
-import displayCtrl from './displayModule.js';
+import {displayCtrl} from './displayModule.js';
 // eslint-disable-next-line import/extensions
 import { playerFactory }  from './players.js';
 import '../assets/global.scss';
@@ -121,4 +121,4 @@ const gameModule = (function () {
 document.getElementById('form').addEventListener('keypress', gameModule.gameInit);
 document.querySelector('#replay').addEventListener('click', gameModule.cleanBoard);
 
-export default gameModule;
+export {gameModule};

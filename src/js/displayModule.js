@@ -95,4 +95,4 @@ document.getElementById('rules-btn').addEventListener('click', () => {
   alert('Click on Multiplayer, fill up the form with the names of the two players and hit enter to start playing. To make the moves, click on the position in the board. To reset the game, click on the icon on the top right corner.');
 });
 
-export default displayCtrl;
+export {displayCtrl};

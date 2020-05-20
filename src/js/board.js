@@ -18,4 +18,4 @@ const boardGame = (function () {
   };
 }());
 
-export default boardGame;
+export {boardGame};
