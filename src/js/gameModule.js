@@ -3,7 +3,7 @@ import boardGame from './board.js';
 // eslint-disable-next-line import/extensions
 import displayCtrl from './displayModule.js';
 // eslint-disable-next-line import/extensions
-import playerFactory from './players.js';
+import { playerFactory }  from './players.js';
 import '../assets/global.scss';
 
 // eslint-disable-next-line func-names
