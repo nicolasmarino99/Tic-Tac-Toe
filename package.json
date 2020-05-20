@@ -1,0 +1,41 @@
+{
+  "name": "Tic-Tac-Toe",
+  "version": "1.0.0",
+  "description": "In this project we created a Tic-Tac-Toe game. It has the following fuctionalities:\r - player creation;\r - score victories;\r - user interface.",
+  "main": "index.js",
+  "dependencies": {
+    "bulma-start": "^0.0.3"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.9.6",
+    "css-loader": "^3.5.3",
+    "favicons-webpack-plugin": "^3.0.1",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "image-webpack-loader": "^6.0.0",
+    "jest": "^26.0.1",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-watched-glob-entries-plugin": "^2.1.5"
+  },
+  "scripts": {
+    "test": "jest",
+    "styleModules": "npm install --save-dev image-webpack-loader css-loader favicons-webpack-plugin file-loader html-webpack-plugin sass sass-loader style-loader webpack-dev-server webpack-watched-glob-entries-plugin",
+    "installAll": "npm run styleModules && npx webpack --config webpack.config.js",
+    "start": "webpack-dev-server --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolasmarino99/Tic-Tac-Toe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicolasmarino99/Tic-Tac-Toe/issues"
+  },
+  "homepage": "https://github.com/nicolasmarino99/Tic-Tac-Toe#readme"
+}
