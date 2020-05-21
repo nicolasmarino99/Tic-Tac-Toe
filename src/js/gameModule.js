@@ -4,10 +4,10 @@ import {boardGame} from './board.js';
 import {displayCtrl} from './displayModule.js';
 // eslint-disable-next-line import/extensions
 import { playerFactory }  from './players.js';
-import '../assets/global.scss';
 
 // eslint-disable-next-line func-names
 const gameModule = (function () {
+
   let player0;
   let player1;
   let currentPlayer;
@@ -91,7 +91,7 @@ const gameModule = (function () {
     });
   };
 
-  const gameInit = () => {
+  const gameInit = (event) => {
     // eslint-disable-next-line no-restricted-globals
     if (event.key === 'Enter') {
       names = displayCtrl.getNames();
@@ -113,12 +113,22 @@ const gameModule = (function () {
 
   const getCurrentPlayer = () => currentPlayer;
 
+  const setNames = (value) => names = value;
+
+  const getPlayer0 = () => player0;
+
+  const getPlayer1 = () => player1;
+
   return {
-    gameInit, newGame, getStatus, getCurrentPlayer, cleanBoard,
+    gameInit, 
+    newGame, 
+    getStatus, 
+    getCurrentPlayer, 
+    cleanBoard,  
+    setNames, 
+    getPlayer0,
+    getPlayer1
   };
 }());
 
-document.getElementById('form').addEventListener('keypress', gameModule.gameInit);
-document.querySelector('#replay').addEventListener('click', gameModule.cleanBoard);
-
-export {gameModule};
+export { gameModule };
