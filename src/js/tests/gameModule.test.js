@@ -5,9 +5,10 @@ jest.mock("../players.js")
 const mockPlayer0 = {name: "Bruna", mark: "X", score: 0}
 const mockPlayer1 = {name: "Nicolas", mark: "O", score: 0}
 
+//gameModule.gameInit("Enter")
+
 test("when new game, status should be 'on'", () => {
-    //gameModule.setNames(["John", "Mary"])
-    gameModule.gameInit("Enter")
+    gameModule.setNames(["John", "Mary"])
     playerFactory.mockReturnValueOnce(mockPlayer0)
 
     gameModule.newGame()
