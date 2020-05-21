@@ -1,13 +1,12 @@
 // eslint-disable-next-line import/extensions
-import {boardGame} from './board.js';
+import { boardGame } from './board.js';
 // eslint-disable-next-line import/extensions
-import {displayCtrl} from './displayModule.js';
+import { displayCtrl } from './displayModule.js';
 // eslint-disable-next-line import/extensions
-import { playerFactory }  from './players.js';
+import { playerFactory } from './players.js';
 
 // eslint-disable-next-line func-names
 const gameModule = (function () {
-
   let player0;
   let player1;
   let currentPlayer;
@@ -120,15 +119,15 @@ const gameModule = (function () {
   const getPlayer1 = () => player1;
 
   return {
-    gameInit, 
-    newGame, 
+    gameInit,
+    newGame,
     makeMove,
-    getStatus, 
-    getCurrentPlayer, 
-    cleanBoard,  
-    setNames, 
+    getStatus,
+    getCurrentPlayer,
+    cleanBoard,
+    setNames,
     getPlayer0,
-    getPlayer1
+    getPlayer1,
   };
 }());
 

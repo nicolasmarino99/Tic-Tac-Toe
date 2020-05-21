@@ -26,7 +26,7 @@ const displayCtrl = (function () {
       // eslint-disable-next-line no-alert
       alert('Click on Multiplayer, fill up the form with the names of the two players and hit enter to start playing. To make the moves, click on the position in the board. To reset the game, click on the icon on the top right corner.');
     });
-  }
+  };
 
   const setName = (name0, name1) => {
     document.getElementById('name-0').innerHTML = name0;
@@ -91,8 +91,8 @@ const displayCtrl = (function () {
     displayMessage,
     scoreCounter,
     emptyCells,
-    initEvents
+    initEvents,
   };
 }());
 
-export { displayCtrl};
+export { displayCtrl };

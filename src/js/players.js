@@ -1,5 +1,3 @@
-const playerFactory = (name, mark, score = 0) => {
-  return { name, mark, score };
-};
+const playerFactory = (name, mark, score = 0) => ({ name, mark, score });
 
 export { playerFactory };
