@@ -30,3 +30,21 @@ describe("when new game starts", () => {
         expect(gameModule.getCurrentPlayer()).toEqual(mockPlayer0)
     })
 })
+
+describe("Set logic game", () => {      
+
+    gameModule.newGame = jest.fn();
+
+    const event = {key: 'Enter'}
+    test.only("functions should be called on gameInit after enter is pressed", () => {
+        gameModule.gameInit(event);
+
+        expect(gameModule.newGame).toHaveBeenCalled()
+    })
+
+    
+
+
+
+})
+
