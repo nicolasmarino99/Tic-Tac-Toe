@@ -91,9 +91,9 @@ const gameModule = (function () {
     });
   };
 
-  const gameInit = (key) => {
+  const gameInit = (event) => {
     // eslint-disable-next-line no-restricted-globals
-    if (key === 'Enter') {
+    if (event.key === 'Enter') {
       names = displayCtrl.getNames();
       newGame();
       boardArray = boardGame.newBoard();
@@ -122,6 +122,7 @@ const gameModule = (function () {
   return {
     gameInit, 
     newGame, 
+    makeMove,
     getStatus, 
     getCurrentPlayer, 
     cleanBoard,  

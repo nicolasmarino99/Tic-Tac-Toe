@@ -1,12 +1,12 @@
+jest.mock("../players.js")
+
 import { gameModule } from "../gameModule";
 import { playerFactory } from "../players.js";
 
-jest.mock("../players.js")
 const mockPlayer0 = {name: "Bruna", mark: "X", score: 0}
 const mockPlayer1 = {name: "Nicolas", mark: "O", score: 0}
 gameModule.setNames(["John", "Mary"])
 
-//gameModule.gameInit("Enter")
 
 describe("when new game starts", () => {
     test("status should be 'on'", () => {
@@ -30,21 +30,3 @@ describe("when new game starts", () => {
         expect(gameModule.getCurrentPlayer()).toEqual(mockPlayer0)
     })
 })
-
-describe("Set logic game", () => {      
-
-    gameModule.newGame = jest.fn();
-
-    const event = {key: 'Enter'}
-    test.only("functions should be called on gameInit after enter is pressed", () => {
-        gameModule.gameInit(event);
-
-        expect(gameModule.newGame).toHaveBeenCalled()
-    })
-
-    
-
-
-
-})
-
