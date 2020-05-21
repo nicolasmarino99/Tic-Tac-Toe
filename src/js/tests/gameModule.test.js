@@ -1,5 +1,5 @@
 import { gameModule } from '../gameModule';
-import { playerFactory } from '../players.js';
+import { playerFactory } from '../players';
 
 jest.mock('../players.js');
 
