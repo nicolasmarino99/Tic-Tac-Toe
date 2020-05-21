@@ -1,4 +1,4 @@
-import { playerFactory } from '../players.js';
+import { playerFactory } from '../players';
 
 describe('Player factory create player object with name, mark and score', () => {
   test("Name: 'Bruna', mark: 'X', score: 0", () => {
