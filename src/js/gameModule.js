@@ -66,6 +66,8 @@ const gameModule = (function () {
     }
   };
 
+  
+
   const makeMove = () => {
     document.getElementById('grid').addEventListener('click', () => {
       if (gameStatus === 'on') {
