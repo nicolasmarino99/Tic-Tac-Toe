@@ -97,11 +97,10 @@ const gameModule = (function () {
       newGame();
       boardArray = boardGame.newBoard();
       displayCtrl.displayBoard(boardArray);
-      makeMove();
-    
+      lib.makeMove();
+
       return { names, boardArray }
     }
-    
   };
 
   const cleanBoard = () => {
@@ -109,7 +108,7 @@ const gameModule = (function () {
     boardArray = boardGame.newBoard();
     displayCtrl.emptyCells();
     displayCtrl.toggleHidden(document.querySelector('#message-box'));
-    return boardArray
+    return boardArray;
   };
 
   const getStatus = () => gameStatus;
@@ -122,7 +121,7 @@ const gameModule = (function () {
 
   const getPlayer1 = () => player1;
 
-  return {
+  const lib = {
     gameInit,
     newGame,
     getStatus,
@@ -131,7 +130,10 @@ const gameModule = (function () {
     setNames,
     getPlayer0,
     getPlayer1,
+    makeMove,
   };
+
+  return lib;
 }());
 
-export { gameModule };
+export default gameModule;

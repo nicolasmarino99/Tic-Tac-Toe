@@ -1,29 +1,28 @@
-import { gameModule } from '../gameModule';
+import gameModule from '../gameModule';
 import { playerFactory } from '../players';
+import { displayCtrl } from '../displayModule';
+import boardGame from '../board';
 
 jest.mock('../players.js');
+jest.mock('../displayModule');
 
 const mockPlayer0 = { name: 'Bruna', mark: 'X', score: 0 };
 const mockPlayer1 = { name: 'Nicolas', mark: 'O', score: 0 };
+const boardArray = new Array(9).fill(' ');
 
 test('set current player names', ()=> {
-  expect(gameModule.setNames(['John', 'Mary'])).toEqual(['John', 'Mary'])
-})
+  expect(gameModule.setNames(['John', 'Mary'])).toEqual(['John', 'Mary']);
+});
 
 gameModule.setNames(['John', 'Mary']);
 
-
-
-
 beforeEach(() => {
-  // Clears the database and adds some testing data.
-  // Jest will wait for this promise to resolve before running tests.
   playerFactory.mockReturnValueOnce(mockPlayer0);
   playerFactory.mockReturnValueOnce(mockPlayer1);
 });
+
 describe('when new game starts', () => {
   test("status should be 'on'", () => {
-   
 
     gameModule.newGame();
 
@@ -44,14 +43,13 @@ describe('when new game starts', () => {
 });
 
 
-test('cleanBoard return an array 9 empty strings', ()=> {
-  expect(gameModule.cleanBoard()).toEqual(new Array(9).fill(' '))
-})
+test('cleanBoard return an array 9 empty strings', () => {
+  expect(gameModule.cleanBoard()).toEqual(boardArray);
+});
 
-//test('initialize game match', () => {
-//  const event = {key: 'Enter'}
-//  expect(gameModule.gameInit(event).toEqual({names: ['John', 'Mary'], boardArray: new Array(9).fill(' ')}))
-//})
-
-//(gameInit,).
-
+test('initialize game match', () => {
+  const event = { key: 'Enter' };
+  displayCtrl.getNames.mockReturnValueOnce(['John', 'Mary']);
+  jest.spyOn(gameModule, 'makeMove').mockReturnValueOnce(true);
+  expect(gameModule.gameInit(event)).toEqual({ names: ['John', 'Mary'], boardArray });
+});
