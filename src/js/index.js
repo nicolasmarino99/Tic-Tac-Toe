@@ -1,5 +1,5 @@
 import '../assets/global.scss';
-import { gameModule } from './gameModule';
+import gameModule from './gameModule';
 import { displayCtrl } from './displayModule';
 
 document.getElementById('form').addEventListener('keypress', gameModule.gameInit);
