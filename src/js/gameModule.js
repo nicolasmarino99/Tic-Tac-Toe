@@ -90,6 +90,7 @@ const gameModule = (function () {
     });
   };
 
+  // eslint-disable-next-line consistent-return
   const gameInit = (event) => {
     // eslint-disable-next-line no-restricted-globals
     if (event.key === 'Enter') {
@@ -97,6 +98,7 @@ const gameModule = (function () {
       newGame();
       boardArray = boardGame.newBoard();
       displayCtrl.displayBoard(boardArray);
+      // eslint-disable-next-line no-use-before-define
       lib.makeMove();
 
       return { names, boardArray };
@@ -115,6 +117,7 @@ const gameModule = (function () {
 
   const getCurrentPlayer = () => currentPlayer;
 
+  // eslint-disable-next-line no-return-assign
   const setNames = (value) => names = value;
 
   const getPlayer0 = () => player0;

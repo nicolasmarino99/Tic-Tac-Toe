@@ -5,6 +5,7 @@ const boardGame = (function () {
   const getBoard = () => board;
 
   const newBoard = () => {
+    // eslint-disable-next-line no-use-before-define
     const currentBoard = lib.getBoard();
     board = currentBoard == null ? new Array(9).fill(' ') : currentBoard.fill(' ');
     return board;

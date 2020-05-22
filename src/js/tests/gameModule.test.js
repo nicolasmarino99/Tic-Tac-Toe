@@ -1,7 +1,6 @@
 import gameModule from '../gameModule';
 import { playerFactory } from '../players';
 import { displayCtrl } from '../displayModule';
-import boardGame from '../board';
 
 jest.mock('../players.js');
 jest.mock('../displayModule');
