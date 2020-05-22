@@ -99,7 +99,7 @@ const gameModule = (function () {
       displayCtrl.displayBoard(boardArray);
       lib.makeMove();
 
-      return { names, boardArray }
+      return { names, boardArray };
     }
   };
 

@@ -10,7 +10,7 @@ const mockPlayer0 = { name: 'Bruna', mark: 'X', score: 0 };
 const mockPlayer1 = { name: 'Nicolas', mark: 'O', score: 0 };
 const boardArray = new Array(9).fill(' ');
 
-test('set current player names', ()=> {
+test('set current player names', () => {
   expect(gameModule.setNames(['John', 'Mary'])).toEqual(['John', 'Mary']);
 });
 
@@ -23,7 +23,6 @@ beforeEach(() => {
 
 describe('when new game starts', () => {
   test("status should be 'on'", () => {
-
     gameModule.newGame();
 
     expect(gameModule.getStatus()).toBe('on');
