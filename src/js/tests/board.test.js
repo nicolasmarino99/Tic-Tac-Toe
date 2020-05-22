@@ -1,12 +1,26 @@
-import { boardGame } from '../board';
+import boardGame from '../board';
 
 const boardArray = new Array(9).fill(' ');
 
-test('newboard function should return a board an empty array', () => {
-  expect(boardGame.newBoard()).toEqual(boardArray);
+describe('When get board is called, it return board', () => {
+  test('if game is not initialized yet, board is null', () => {
+    expect(boardGame.getBoard()).toBeUndefined();
+  });
 });
 
-test("update mark X on index 2 array's game", () => {
+describe('newBoard function', () => {
+  test('if board is undefined, board should be a new empty array', () => {
+    expect(boardGame.newBoard()).toEqual(boardArray);
+  });
+
+  test('if board array exists, it should return an empty array', () => {
+    jest.spyOn(boardGame, 'getBoard').mockReturnValueOnce(['X', 'O', ' ', 'X', 'O', ' ', 'X', 'O', ' ']);
+    const resultBoard = boardGame.newBoard();
+    expect(resultBoard).toEqual(boardArray);
+  });
+});
+
+test('When update board array with mark X on position 2 should return updated board', () => {
   boardGame.newBoard();
   boardGame.updateArray(2, 'X');
   expect(boardGame.getBoard()).toEqual([' ', ' ', 'X', ' ', ' ', ' ', ' ', ' ', ' ']);

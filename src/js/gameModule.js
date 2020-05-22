@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/extensions
-import { boardGame } from './board.js';
+import boardGame from './board.js';
 // eslint-disable-next-line import/extensions
 import { displayCtrl } from './displayModule.js';
 // eslint-disable-next-line import/extensions

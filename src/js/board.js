@@ -2,8 +2,11 @@
 const boardGame = (function () {
   let board;
 
+  const getBoard = () => board;
+
   const newBoard = () => {
-    board = board == null ? new Array(9).fill(' ') : board.fill(' ');
+    const currentBoard = lib.getBoard();
+    board = currentBoard == null ? new Array(9).fill(' ') : currentBoard.fill(' ');
     return board;
   };
 
@@ -11,11 +14,11 @@ const boardGame = (function () {
     board[position] = mark;
   };
 
-  const getBoard = () => board;
-
-  return {
+  const lib = {
     newBoard, getBoard, updateArray,
   };
+
+  return lib;
 }());
 
-export { boardGame };
+export default boardGame;
