@@ -98,7 +98,10 @@ const gameModule = (function () {
       boardArray = boardGame.newBoard();
       displayCtrl.displayBoard(boardArray);
       makeMove();
+    
+      return { names, boardArray }
     }
+    
   };
 
   const cleanBoard = () => {
@@ -106,6 +109,7 @@ const gameModule = (function () {
     boardArray = boardGame.newBoard();
     displayCtrl.emptyCells();
     displayCtrl.toggleHidden(document.querySelector('#message-box'));
+    return boardArray
   };
 
   const getStatus = () => gameStatus;
@@ -121,7 +125,6 @@ const gameModule = (function () {
   return {
     gameInit,
     newGame,
-    makeMove,
     getStatus,
     getCurrentPlayer,
     cleanBoard,

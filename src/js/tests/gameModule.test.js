@@ -5,13 +5,25 @@ jest.mock('../players.js');
 
 const mockPlayer0 = { name: 'Bruna', mark: 'X', score: 0 };
 const mockPlayer1 = { name: 'Nicolas', mark: 'O', score: 0 };
+
+test('set current player names', ()=> {
+  expect(gameModule.setNames(['John', 'Mary'])).toEqual(['John', 'Mary'])
+})
+
 gameModule.setNames(['John', 'Mary']);
 
 
+
+
+beforeEach(() => {
+  // Clears the database and adds some testing data.
+  // Jest will wait for this promise to resolve before running tests.
+  playerFactory.mockReturnValueOnce(mockPlayer0);
+  playerFactory.mockReturnValueOnce(mockPlayer1);
+});
 describe('when new game starts', () => {
   test("status should be 'on'", () => {
-    playerFactory.mockReturnValueOnce(mockPlayer0);
-    playerFactory.mockReturnValueOnce(mockPlayer1);
+   
 
     gameModule.newGame();
 
@@ -30,3 +42,16 @@ describe('when new game starts', () => {
     expect(gameModule.getCurrentPlayer()).toEqual(mockPlayer0);
   });
 });
+
+
+test('cleanBoard return an array 9 empty strings', ()=> {
+  expect(gameModule.cleanBoard()).toEqual(new Array(9).fill(' '))
+})
+
+//test('initialize game match', () => {
+//  const event = {key: 'Enter'}
+//  expect(gameModule.gameInit(event).toEqual({names: ['John', 'Mary'], boardArray: new Array(9).fill(' ')}))
+//})
+
+//(gameInit,).
+
