@@ -5,8 +5,8 @@
 - score victories;
 - user interface.
 
-![screenshot](assets/img/ttt_menu.png)
-![screenshot](assets/img/ttt_match.png)
+![screenshot](./src/assets/img/ttt_menu.png)
+![screenshot](./src/assets/img/ttt_match.png)
 
 You can find the original description in [The Odin Project](https://www.theodinproject.com/courses/javascript/lessons/tic-tac-toe-javascript)
 
