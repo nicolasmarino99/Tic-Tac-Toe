@@ -1,9 +1,9 @@
-import gameModule from '../gameModule';
-import { playerFactory } from '../players';
-import { displayCtrl } from '../displayModule';
+import gameModule from '../src/js/gameModule';
+import { playerFactory } from '../src/js/players';
+import { displayCtrl } from '../src/js/displayModule';
 
-jest.mock('../players.js');
-jest.mock('../displayModule');
+jest.mock('../src/js/players.js');
+jest.mock('../src/js/displayModule');
 
 const mockPlayer0 = { name: 'Bruna', mark: 'X', score: 0 };
 const mockPlayer1 = { name: 'Nicolas', mark: 'O', score: 0 };

@@ -1,4 +1,4 @@
-import boardGame from '../board';
+import boardGame from '../src/js/board.js';
 
 const boardArray = new Array(9).fill(' ');
 
