@@ -1,6 +1,6 @@
 # JavaScript Tic-Tac-Toe
 
-> In this project we created a Tic-Tac-Toe game. It has the following fuctionalities:
+> In this project we created a Tic-Tac-Toe game with unit Testing. It has the following fuctionalities:
 - player creation;
 - score victories;
 - user interface.
@@ -15,6 +15,10 @@ You can find the original description in [The Odin Project](https://www.theodinp
 - HTML5 
 - Sass
 - JavaScript
+- webpack 3
+- npm
+- babel
+- Jest
 
 ## Live Demo
 
@@ -23,7 +27,14 @@ You can find the original description in [The Odin Project](https://www.theodinp
 
 ## Getting Started
 
-Access the live demo website and click on multiplayer. Fill up the form with the name of the two players and hit enter to start playing. To make the moves, click on the position in the board. To reset the game, click on the icon on the top right corner.
+Download or clone the project [here](https://github.com/nicolasmarino99/tic-tac-toe.git), then enter in the project's directory from the terminal and run the following comands:
+
+- `npm i`
+- `npm run start`
+
+If you want to run the test from this project type:
+
+- `npm run test`
 
 ### Prerequisites
 - web browser
