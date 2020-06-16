@@ -35,12 +35,14 @@ Access the live demo website and click on multiplayer. Fill up the form with the
 - Github: [@nicolasmarino99](https://github.com/nicolasmarino99)
 - Twitter: [@nicolasmarino99](https://twitter.com/nicolasmarino99)
 - Linkedin: [Nicolás Mariño Parra](https://www.linkedin.com/in/nicol%C3%A1s-mari%C3%B1o-parra-45a707177/)
+- Email: nicolasmarinoparra@gmail.com
 
 :woman: **Bruna Genz**
 
 - Github: [@bruna-genz](https://github.com/bruna-genz)
 - Twitter: [@Bruna_GK](https://twitter.com/Bruna_GK)
 - Linkedin: [Bruna Genz](https://www.linkedin.com/in/brunagenz/)
+- Email: brunagenz92@gmail.com
 
 ## 🤝 Contributing
 
