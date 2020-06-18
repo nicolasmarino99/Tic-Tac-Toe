@@ -14,10 +14,6 @@ const displayCtrl = (function () {
     document.getElementById('multiplayer-btn').addEventListener('click', () => {
       displayCtrl.toggleHidden(document.getElementById('form'))();
     });
-    document.getElementById('back').addEventListener('click', () => {
-      // eslint-disable-next-line no-alert
-      alert('To return, press F5');
-    });
     document.getElementById('youvsai-btn').addEventListener('click', () => {
       // eslint-disable-next-line no-alert
       alert('Page under construction.');

@@ -19,6 +19,11 @@
             border: none;
             padding: 0 30px;
         }
+        #back {
+            &:hover{
+                cursor: pointer;
+            }
+        }
         h1 { 
             display: flex;
             justify-content: center;
