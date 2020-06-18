@@ -95,7 +95,7 @@ const gameModule = (function () {
   // eslint-disable-next-line consistent-return
   const gameInit = (event) => {
     // eslint-disable-next-line no-restricted-globals
-    if (event.key === 'Enter') {
+    if (event.target.id === 'play-btn') {
       names = displayCtrl.getNames();
       newGame();
       boardArray = boardGame.newBoard();

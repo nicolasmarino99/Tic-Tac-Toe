@@ -71,6 +71,17 @@
                     
                 }
             }
+            .btn-small {
+                width: 75px;
+                height: 75px;
+                margin: 0;
+                text-align: center;
+                justify-content: center;
+                font-size: 25px;
+                font-weight: bold;
+                color: white;
+                background-color: #848ac4;
+            }
             @keyframes pulse {
                 0% { box-shadow: 0 0 0 0 var(--hover); }
             }
