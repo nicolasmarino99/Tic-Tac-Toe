@@ -46,7 +46,7 @@ test('cleanBoard return an array 9 empty strings', () => {
 });
 
 test('initialize game match', () => {
-  const event = { key: 'Enter' };
+  const event = { target: { id: 'play-btn' } };
   displayCtrl.getNames.mockReturnValueOnce(['John', 'Mary']);
   jest.spyOn(gameModule, 'makeMove').mockReturnValueOnce(true);
   expect(gameModule.gameInit(event)).toEqual({ names: ['John', 'Mary'], boardArray });
