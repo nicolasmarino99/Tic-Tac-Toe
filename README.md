@@ -1,32 +1,72 @@
-# JavaScript Tic-Tac-Toe
+</br>   
+<div align="center">
+    <img src="./src/assets/img/TTT-logo.png" width="100">
+    <h1 align="center" width="90">Tic-Tac-Toe</h1>
+    <h2><a href="https://rawcdn.githack.com/nicolasmarino99/Tic-Tac-Toe/c5dc04b422b4ebe2c9ff7c3f26bce5ca9d71d431/index.html">Play now >></a></h2>
+</div>
 
-> In this project we created a Tic-Tac-Toe game. It has the following fuctionalities:
-- player creation;
-- score victories;
-- user interface.
+## Table of Contents
 
-![screenshot](assets/img/ttt_menu.png)
-![screenshot](assets/img/ttt_match.png)
+- [About](https://github.com/bruna-genz/Tic-Tac-Toe-JS#about)
+- [Preview](https://github.com/bruna-genz/Tic-Tac-Toe-JS#preview)
+- [Installation](https://github.com/bruna-genz/Tic-Tac-Toe-JS#installation)
+- [Testing](https://github.com/bruna-genz/Tic-Tac-Toe-JS#testing)
+- [Built with](https://github.com/bruna-genz/Tic-Tac-Toe-JS#built-with)
+- [Future features](https://github.com/bruna-genz/Tic-Tac-Toe-JS#future-features)
+- [Authors](https://github.com/bruna-genz/Tic-Tac-Toe-JS#authors)
 
-You can find the original description in [The Odin Project](https://www.theodinproject.com/courses/javascript/lessons/tic-tac-toe-javascript)
+## About 
+
+In this project, we created a classic Tic-Tac-Toe game with a creative and modern design. Other than the game itself, the app also has the functionality to create players and to register the victories scores. This project has Unit tests.
+
+You can find the original description at [The Odin Project](https://www.theodinproject.com/courses/javascript/lessons/tic-tac-toe-javascript).
+
+## Preview
+
+### Game menu
+![screenshot](./src/assets/img/ttt_menu.png)
+
+### Multiplayer match
+![screenshot](./src/assets/img/ttt_match.png) 
+
+## Installation
+
+**To play online**
+- Just access [this link](https://rawcdn.githack.com/nicolasmarino99/Tic-Tac-Toe/c5dc04b422b4ebe2c9ff7c3f26bce5ca9d71d431/index.html) for the live version. To start the game, click on the button "Multiplayer", type the players' names and click on "Go!".
+
+**To install the game locally**
+- Download or clone the [game repository](https://github.com/bruna-genz/Tic-Tac-Toe-JS.git).
+- Navigate to the game root directory from your terminal.
+- Install the required packages with the following command:
+```
+npm i
+```
+- Run the following command to start the game in your browser.
+```
+npm run start
+```
+
+## Testing
+
+This project has unit tests. To run it, use the following command:
+```
+npm run test
+```
 
 ## Built With
 
 - HTML5 
 - Sass
 - JavaScript
+- webpack 3
+- npm
+- babel
+- Jest
 
-## Live Demo
+## Future features
 
-[Live Demo Link](https://rawcdn.githack.com/nicolasmarino99/Tic-Tac-Toe/3e25b8e70780e3a44724cf21789a364aa5f8a11e/index.html)
-
-
-## Getting Started
-
-Access the live demo website and click on multiplayer. Fill up the form with the name of the two players and hit enter to start playing. To make the moves, click on the position in the board. To reset the game, click on the icon on the top right corner.
-
-### Prerequisites
-- web browser
+- Improve instructions view.
+- Add functionality to play against the computer.
 
 ## Authors
 
@@ -43,6 +83,7 @@ Access the live demo website and click on multiplayer. Fill up the form with the
 - Twitter: [@Bruna_GK](https://twitter.com/Bruna_GK)
 - Linkedin: [Bruna Genz](https://www.linkedin.com/in/brunagenz/)
 - Email: brunagenz92@gmail.com
+
 
 ## 🤝 Contributing
 
